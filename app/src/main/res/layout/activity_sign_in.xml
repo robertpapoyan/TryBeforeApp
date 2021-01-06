@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/profile_welcome_text" />
 
     <EditText
-        android:id="@+id/loginEmailTxt"
+        android:id="@+id/signInEmailText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-            android:id="@+id/loginPasswordTxt"
+            android:id="@+id/signInPasswordText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -61,21 +61,21 @@
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginEmailTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/signInEmailText" />
 
     <Button
-        android:id="@+id/createUserButton"
+        android:id="@+id/logInButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="12dp"
         android:background="@color/mainColour"
-        android:onClick="createUserButtonClicked"
-        android:text="Sign Up"
+        android:onClick="logInButtonClicked"
+        android:text="Sign In"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPasswordTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/signInPasswordText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

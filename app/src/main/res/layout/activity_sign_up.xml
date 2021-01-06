@@ -66,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/createUserEmailText" />
 
     <Button
-        android:id="@+id/createUserButton"
+        android:id="@+id/logInButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
