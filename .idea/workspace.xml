@@ -10,7 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="287eda5d-9236-4bfc-a33d-528fb97a21e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -72,6 +75,8 @@
       <recent name="com.example.trybeforeapp.Controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\AndroidStudioProjects\TryBeforeApp\app" />
+      <recent name="C:\Users\Administrator\AndroidStudioProjects\TryBeforeApp\app\build" />
       <recent name="C:\Users\Administrator\AndroidStudioProjects\TryBeforeApp\app\src\main\res\drawable" />
     </key>
   </component>
@@ -181,25 +186,29 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607973489975" />
-    <state width="1491" height="212" key="GridCell.Tab.0.bottom" timestamp="1609959811666">
+    <state width="1491" height="212" key="GridCell.Tab.0.bottom" timestamp="1609961582326">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="212" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1609959811666" />
-    <state width="1491" height="212" key="GridCell.Tab.0.center" timestamp="1609959811665">
+    <state width="1491" height="212" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1609961582326" />
+    <state width="1491" height="212" key="GridCell.Tab.0.center" timestamp="1609961582326">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="212" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1609959811665" />
-    <state width="1491" height="212" key="GridCell.Tab.0.left" timestamp="1609959811663">
+    <state width="1491" height="212" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1609961582326" />
+    <state width="1491" height="212" key="GridCell.Tab.0.left" timestamp="1609961582326">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="212" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1609959811663" />
-    <state width="1491" height="212" key="GridCell.Tab.0.right" timestamp="1609959811665">
+    <state width="1491" height="212" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1609961582326" />
+    <state width="1491" height="212" key="GridCell.Tab.0.right" timestamp="1609961582326">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="212" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1609959811665" />
-    <state x="445" y="318" key="com.intellij.ide.util.TipDialog" timestamp="1606564799498">
+    <state width="1491" height="212" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1609961582326" />
+    <state x="277" y="59" key="SettingsEditor" timestamp="1610011841431">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="445" y="318" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1606564799498" />
+    <state x="277" y="59" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1610011841431" />
+    <state x="445" y="318" key="com.intellij.ide.util.TipDialog" timestamp="1610011780320">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="445" y="318" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1610011780320" />
   </component>
 </project>

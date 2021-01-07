@@ -11,9 +11,12 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
     }
 
+
+
     fun createUserButtonClicked(view: View){
 
         //Registration logic must be here
+        
 
     }
 }
