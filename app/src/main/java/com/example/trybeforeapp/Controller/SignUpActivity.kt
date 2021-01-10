@@ -61,10 +61,8 @@ class SignUpActivity : AppCompatActivity() {
 
                         referenceUsers.updateChildren(userHashMap)
                             .addOnCompleteListener { task ->
-
-                                //In case if creation is successful the user is being relocated to User profile page
                                 if (task.isSuccessful) {
-
+                                //In case if creation is successful the user is being relocated to User profile page
                                     val loggedInUserProfilePage = Intent(this, LoggedInUserProfilePage::class.java)
                                     startActivity(loggedInUserProfilePage)
                                 }
