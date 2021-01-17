@@ -23,7 +23,29 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         signInButton.setOnClickListener {
-            login()
+            val signInUserEmail = signInEmailText.text.toString()
+            val signInUserPassword = signInPasswordText.text.toString()
+
+            if (signInUserEmail == "") {
+
+                Toast.makeText(this, "Fill email please", Toast.LENGTH_LONG).show()
+
+            } else if (signInUserPassword == "") {
+
+                Toast.makeText(this, "Fill password please", Toast.LENGTH_LONG).show()
+
+            } else {
+                mAuth.signInWithEmailAndPassword(signInUserEmail,signInUserPassword)
+                    .addOnCompleteListener { task ->
+                        if(task.isSuccessful){
+                            Log.i("SignIn", "login: ${mAuth.uid}")
+                            val loggedInUserProfilePage = Intent(this, LoggedInUserProfilePage::class.java)
+                            startActivity(loggedInUserProfilePage)
+                        }  else  {
+                            Toast.makeText(this, "something went wrong you prick", Toast.LENGTH_LONG).show()
+                        }
+                    }
+            }
 
         }
 
@@ -33,40 +55,4 @@ class SignInActivity : AppCompatActivity() {
 //    fun signInButtonClicked(view: View){
 //        login()
 //    }
-
-    fun login(){
-        val signInUserEmail = signInEmailText.text.toString()
-        val signInUserPassword = signInPasswordText.text.toString()
-
-        if (signInUserEmail == "") {
-
-            Toast.makeText(this, "Fill email please", Toast.LENGTH_LONG).show()
-
-        } else if (signInUserPassword == "") {
-
-            Toast.makeText(this, "Fill password please", Toast.LENGTH_LONG).show()
-
-        } else {
-            mAuth.signInWithEmailAndPassword(signInUserEmail,signInUserPassword)
-                .addOnCompleteListener { task ->
-                    if(task.isSuccessful){
-                        Log.i("SignIn", "login: ${mAuth.uid}")
-                        val loggedInUserProfilePage = Intent(this, LoggedInUserProfilePage::class.java)
-                        startActivity(loggedInUserProfilePage)
-                    }  else  {
-                        Toast.makeText(this, "something went wrong you prick", Toast.LENGTH_LONG).show()
-                    }
-                }
-        }
-    }
-
-    fun updateUI(currentUser: FirebaseUser?){
-        if (currentUser != null){
-            val loggedInUserProfilePage = Intent(this, LoggedInUserProfilePage::class.java)
-            startActivity(loggedInUserProfilePage)
-            Toast.makeText(this,"Great! Now you are in", Toast.LENGTH_LONG).show()
-        } else {
-            Toast.makeText(this, "something went wrong you prick", Toast.LENGTH_LONG).show()
-        }
-    }
 }
