@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
 
+
     lateinit var mAuth: FirebaseAuth
     lateinit var referenceUsers: DatabaseReference
     var currentUserID: String = ""

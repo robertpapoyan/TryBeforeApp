@@ -64,14 +64,14 @@
             app:layout_constraintTop_toBottomOf="@+id/signInEmailText" />
 
     <Button
-        android:id="@+id/logInButton"
+        android:id="@+id/signInButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="12dp"
         android:background="@color/mainColour"
-        android:onClick="logInButtonClicked"
+        android:onClick="signInButtonClicked"
         android:text="Sign In"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
