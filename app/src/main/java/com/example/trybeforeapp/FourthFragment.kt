@@ -2,6 +2,7 @@ package com.example.trybeforeapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -15,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_fourth.*
 
 
 class FourthFragment : Fragment() {
-    lateinit var mAuth: FirebaseAuth
+    private lateinit var mAuth: FirebaseAuth
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,6 +28,7 @@ class FourthFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mAuth = FirebaseAuth.getInstance()
+        Log.i("SignIn", "login: ${mAuth.uid}")
 
         //On sign in button click
 //        profileSignInButton.setOnClickListener {
@@ -40,7 +42,10 @@ class FourthFragment : Fragment() {
 //            startActivity(intent)
 //        }
         signOut.setOnClickListener {
+            Log.i("SignIn", "login: ${mAuth.uid}")
             mAuth.signOut()
+            Log.i("SIGNOUT", "LOGUT")
+            Log.i("SignIn", "login: ${mAuth.uid}")
         }
     }
 }

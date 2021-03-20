@@ -16,7 +16,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
 class SignInActivity : AppCompatActivity() {
-    lateinit var mAuth: FirebaseAuth
+   private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +35,9 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "Fill password please", Toast.LENGTH_LONG).show()
 
             } else {
+                Log.i("SignIn", "email: ${signInUserEmail}")
+                Log.i("SignIn", "email: ${signInUserPassword}")
+                mAuth = FirebaseAuth.getInstance()
                 mAuth.signInWithEmailAndPassword(signInUserEmail,signInUserPassword)
                     .addOnCompleteListener { task ->
                         if(task.isSuccessful){
@@ -51,8 +54,4 @@ class SignInActivity : AppCompatActivity() {
 
 
     }
-
-//    fun signInButtonClicked(view: View){
-//        login()
-//    }
 }
