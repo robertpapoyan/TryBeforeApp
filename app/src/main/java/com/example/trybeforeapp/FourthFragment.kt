@@ -5,18 +5,33 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import com.example.trybeforeapp.Controller.MainActivity
 import com.example.trybeforeapp.Controller.SignInActivity
 import com.example.trybeforeapp.Controller.SignUpActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_fourth.*
 
 
 class FourthFragment : Fragment() {
+
     private lateinit var mAuth: FirebaseAuth
+    private lateinit var mDataBase: DatabaseReference
+    private lateinit var userID: String
+    private lateinit var mUser: FirebaseUser
+    private lateinit var name: TextView
+    private lateinit var lastName: TextView
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,25 +42,35 @@ class FourthFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mAuth = FirebaseAuth.getInstance()
-        Log.i("SignIn", "login: ${mAuth.uid}")
 
-        //On sign in button click
-//        profileSignInButton.setOnClickListener {
-//            val intent = Intent(view.context, SignInActivity::class.java)
-//            startActivity(intent)
-//        }
-//
-//        //On sign up button click
-//        profileSignUpButton.setOnClickListener {
-//            val intent = Intent(view.context, SignUpActivity::class.java)
-//            startActivity(intent)
-//        }
+        //Initializing variables
+
+        /**
+         *  HERE WE ARE GOING TO CREATE A LOGIC
+         *  OF PARSING DATA FROM FIREBASE
+         *  TO USER PROFILE PAGE!!!
+         *
+         *  NOT READY YET!!!!!!!!!!
+         * */
+        mAuth = FirebaseAuth.getInstance()
+        mUser = FirebaseAuth.getInstance().currentUser!!
+        mDataBase = FirebaseDatabase.getInstance().getReference("Users")
+        userID = mUser.uid
+
+        name = userFirstName
+        lastName = userLastName
+
+        mDataBase.child(userID).addListenerForSingleValueEvent( ){
+
+        }
+
+
+        //Sign Out button click action
         signOut.setOnClickListener {
-            Log.i("SignIn", "login: ${mAuth.uid}")
             mAuth.signOut()
-            Log.i("SIGNOUT", "LOGUT")
-            Log.i("SignIn", "login: ${mAuth.uid}")
+
+            val mainActivityIntent = Intent(view.context, MainActivity::class.java)
+            startActivity(mainActivityIntent)
         }
     }
 }
